@@ -11,7 +11,7 @@ router.post("/", function(request, response) {
   burger.create([
     "burger_name", "devoured"
   ], [
-    request.body.burger_name, request.body.devoured
+    request.body.burger_name, request.body.status
   ], function(result) {
     // Send back the ID of the new quote
     response.json({ id: result.insertId });
@@ -21,7 +21,7 @@ router.post("/", function(request, response) {
 router.put("/:id", function(request, response) {
   var condition = "id = " + request.params.id;
 
-  console.log("condition", condition);
+  // console.log("condition", condition);
 
   burger.update({
     devoured: request.body.devoured

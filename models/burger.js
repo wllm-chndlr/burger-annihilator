@@ -10,19 +10,19 @@ var burger = {
   },
   
   // The variables cols and vals are arrays.
-  create: function(table, columns, values, callback) {
+  create: function(columns, values, callback) {
     orm.create("burgers", columns, values, function(result) {
       callback(result);
     });
   },
   
-  update: function(table, objColVals, condition, callback) {
+  update: function(objColVals, condition, callback) {
     orm.update("burgers", objColVals, condition, function(result) {
       callback(result);
     });
   },
   
-  delete: function(table, condition, callback) {
+  delete: function(condition, callback) {
     orm.delete("burgers", condition, function(result) {
       callback(result);
     });

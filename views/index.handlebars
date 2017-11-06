@@ -1,21 +1,21 @@
 <h1>Burger Annihilator!</h1>
 
-<h2>Undevoured burgers!</h2>
+<h2>Ready to annihilate!</h2>
 
 <ul>
   {{#each burgers}}
     {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
+      {{> burgers/burger-block devoured=false}}
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>Devoured burgers!</h2>
+<h2>Already devoured!</h2>
 
 <ul>
   {{#each burgers}}
     {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
+      {{> burgers/burger-block devoured=true}}
     {{/if}}
   {{/each}}
 </ul>
@@ -25,13 +25,13 @@
 
   <div class="form-group">
     <label for="burger_name">Burger Name:</label>
-    <input type="text" id="burger_name" name="name">
+    <input type="text" id="nombre" name="name">
   </div>
 
   <div class="form-group">
     <label for="burger_status">Devoured?</label><br>
-    <input type="radio" name="burger_status" value="1" checked> Devoured!<br>
-    <input type="radio" name="burger_status" value="0"> Not devoured!
+    <input type="radio" name="status" value="1" checked> Yes!<br>
+    <input type="radio" name="status" value="0"> No!
   </div>
 
   <button type="submit">Add Burger</button>

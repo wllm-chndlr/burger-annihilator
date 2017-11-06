@@ -6,7 +6,7 @@ var methodOverride = require("method-override");
 var burgersController = require("./controllers/burgers_controller.js");
 
 // Import the model (burger.js) to use its database functions
-var cat = require("./models/burger.js");
+var burger = require("./models/burger.js");
 
 var port = process.env.PORT || 3000;
 
