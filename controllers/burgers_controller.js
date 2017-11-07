@@ -11,7 +11,8 @@ router.post("/", function(request, response) {
   burger.create([
     "burger_name", "devoured"
   ], [
-    request.body.burger_name, request.body.status
+    // THIS MIGHT BE POTENTIAL ISSUE SPOT (SECOND BODY REQUEST)
+    request.body.burger_name, request.body.devoured
   ], function(result) {
     // Send back the ID of the new quote
     response.json({ id: result.insertId });
@@ -21,9 +22,10 @@ router.post("/", function(request, response) {
 router.put("/:id", function(request, response) {
   var condition = "id = " + request.params.id;
 
-  // console.log("condition", condition);
+  console.log("condition", condition);
 
   burger.update({
+    // ANOTHER POTENTIAL ISSUE AREA
     devoured: request.body.devoured
   }, condition, function(result) {
     if (result.changedRows == 0) {

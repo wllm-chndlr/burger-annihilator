@@ -27,7 +27,6 @@ var burger = {
       callback(result);
     });
   }
-
 };
 
 // Export the database functions for the controller (burgers_controller.js).

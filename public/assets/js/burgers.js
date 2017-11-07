@@ -6,8 +6,9 @@ $(function() {
     event.preventDefault();
 
     var newBurger = {
-      burger_name: $("#nombre").val().trim(),
-      devoured: $("[name=status]:checked").val().trim()
+      // POTENTIAL ISSUE AREA
+      burger_name: $("#bu").val().trim(),
+      devoured: $("[name=devoured]:checked").val().trim()
     };
 
     // Send the POST request
@@ -23,11 +24,12 @@ $(function() {
     );
   });
 
-  $(".change-status").on("click", function(event) {
+  $(".change-devour").on("click", function(event) {
     var id = $(this).data("id");
     var newStatus = $(this).data("newstatus");
 
     var newEatenStatus = {
+      // POTENTIAL ISSUE AREA
       devoured: newStatus
     };
 
@@ -58,5 +60,4 @@ $(function() {
       }
     );
   });
-
 });
