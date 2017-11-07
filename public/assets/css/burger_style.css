@@ -1,4 +1,17 @@
 body {
   padding-top: 20px;
   padding-left: 30px;
+  color: #424242;
+}
+
+html {
+  background-color: #ffa600;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+
 }
