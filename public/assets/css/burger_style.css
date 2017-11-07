@@ -1,17 +1,58 @@
-body {
-  padding-top: 20px;
-  padding-left: 30px;
-  color: #424242;
-}
-
 html {
   background-color: #ffa600;
+}
+
+body {
+  padding: 20px 40px 20px 40px;
+  color: #424242;
+  font-family: 'Bangers', cursive;
 }
 
 h1 {
   text-align: center;
 }
 
+li {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+label {
+  color: #424242;
+}
+
+form {
+  font-size: 20px;
+}
+
 button {
+  color: #424242;
+  background-color: #fff;
+  border: 0px;
+}
+
+img {
+  max-width: 50%;
+}
+
+.btn {
+  color: #424242;
+}
+
+/* #center {
+  width: 50%;
+}
+
+#left {
+  float: left;
 
 }
+
+#right {
+  float: right;
+
+}
+
+.container {
+  width: 100%;
+} */

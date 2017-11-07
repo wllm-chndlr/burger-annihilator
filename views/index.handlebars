@@ -1,38 +1,85 @@
 <h1>Burger Annihilator!</h1>
 
-<h2>Ready to annihilate!</h2>
+<img src='../public/assets/img/burger2.png'/>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devour=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+<div class="container">
 
-<h2>Already devoured!</h2>
+  <div class="row">
+    
+    <div class="col s3">
+    </div>
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devour=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+    <div class="col s6">
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+      <h2>Add a Burger</h2>
+      
+      <form class="create-form col s6">
 
-  <div class="form-group">
-    <label for="bu">Burger Name:</label>
-    <input type="text" id="bu" name="name">
+        <p>Burger Name:</p>
+
+        <div class="form-group">
+          <label for="bu"></label>
+          <input type="text" id="bu" name="name">
+        </div>
+
+        {{!-- <div class="form-group">
+          <label for="burger_status">Devoured?</label>
+          <br>
+          <input type="radio" name="devoured" value="1" checked> Yes!
+          <br>
+          <input type="radio" name="devoured" value="0"> No!
+        </div> --}}
+
+
+          <p>Devoured already?</p>
+          <p>
+            <input type="radio" name="devoured" value="1" id="burger_status1">
+            <label for="burger_status1">Yes!</label>
+          </p>
+          <p>
+            <input type="radio" name="devoured" value="0" id="burger_status2">
+            <label for="burger_status2">No!</label>
+          </p>
+
+        {{!-- <a class="waves-effect waves-light btn grey darken-3" type="submit">
+          Add Burger
+        </a> --}}
+        
+        <button type="submit">Add Burger</button>
+
+      </form>
+
+    </div>
+
+    <div class="col s3">
+    </div>
+
   </div>
 
-  <div class="form-group">
-    <label for="burger_status">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Yes!<br>
-    <input type="radio" name="devoured" value="0"> No!
+  <div class="row">
+
+    <div class="col s6">
+      <h2>Ready to annihilate!</h2>
+      <ul>
+        {{#each burgers}}
+          {{#unless devoured}}
+            {{> burgers/burger-block devour=true}}
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="col s6">
+      <h2>Already devoured!</h2>
+      <ul>
+        {{#each burgers}}
+          {{#if devoured}}
+            {{> burgers/burger-block devour=false}}
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+
   </div>
 
-  <button type="submit">Add Burger</button>
-</form>
+</div>

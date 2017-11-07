@@ -1,4 +1,5 @@
-<li>
+{{!-- <li>
+
 	{{burger_name}}
 
 	<button class="change-devour" data-id="{{id}}" data-newstatus="{{devour}}">
@@ -8,4 +9,19 @@
 	</button>
 
 	<button class="delete-burger" data-id="{{this.id}}">Delete</button>
+
+</li> --}}
+
+<li>
+
+	{{burger_name}}
+	<br>
+	<a class="waves-effect waves-light btn change-devour white darken-1" data-id="{{id}}" data-newstatus="{{devour}}">
+		{{#if devour}}Devour! {{else}}Serve it up! {{/if}}
+	</a>
+
+	<a class="waves-effect waves-light btn delete-burger white darken-1" data-id="{{this.id}}">
+		Delete
+	</a>
+
 </li>
