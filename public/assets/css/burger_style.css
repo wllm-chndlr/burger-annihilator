@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  padding: 20px 40px 20px 40px;
+  /* padding: 20px 40px 20px 40px; */
   color: #424242;
   font-family: 'Bangers', cursive;
 }
@@ -21,7 +21,7 @@ label {
   color: #424242;
 }
 
-form {
+form, input#bu {
   font-size: 20px;
 }
 
@@ -31,8 +31,16 @@ button {
   border: 0px;
 }
 
+div#lists {
+  margin-bottom: 40px;
+}
+
+#burger_row {
+  margin-bottom: 50px;
+}
+
 img {
-  max-width: 50%;
+  max-width: 100%;
 }
 
 .btn {
@@ -56,3 +64,8 @@ img {
 .container {
   width: 100%;
 } */
+
+.page-footer {
+  padding: 0px;
+  font-family: 'BenchNine', sans-serif;
+}

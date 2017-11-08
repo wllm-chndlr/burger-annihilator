@@ -1,21 +1,25 @@
 <h1>Burger Annihilator!</h1>
 
-<img src='../public/assets/img/burger2.png'/>
+{{!-- <img src='assets/img/burger2.png'/> --}}
 
 <div class="container">
 
   <div class="row">
     
     <div class="col s3">
+      <img src='assets/img/burger2.png' />
     </div>
 
-    <div class="col s6">
+    <div class="col s1">
+    </div>
 
-      <h2>Add a Burger</h2>
+    <div class="col s4">
+
+      <h3 class="center-align">Add a Burger</h3>
       
-      <form class="create-form col s6">
+      <form class="create-form">
 
-        <p>Burger Name:</p>
+        {{!-- <p class="center-align">Burger Name:</p> --}}
 
         <div class="form-group">
           <label for="bu"></label>
@@ -31,35 +35,39 @@
         </div> --}}
 
 
-          <p>Devoured already?</p>
+          {{!-- <p>Devoured already?</p>
           <p>
             <input type="radio" name="devoured" value="1" id="burger_status1">
             <label for="burger_status1">Yes!</label>
           </p>
           <p>
-            <input type="radio" name="devoured" value="0" id="burger_status2">
+            <input type="radio" name="devoured" value="0" id="burger_status2" checked>
             <label for="burger_status2">No!</label>
-          </p>
+          </p> --}}
 
         {{!-- <a class="waves-effect waves-light btn grey darken-3" type="submit">
           Add Burger
         </a> --}}
         
-        <button type="submit">Add Burger</button>
+        <button type="submit" class="center-align">Add Burger</button>
 
       </form>
 
     </div>
 
+    <div class="col s1">
+    </div>
+
     <div class="col s3">
+      <img src='assets/img/burger2.png' />
     </div>
 
   </div>
 
-  <div class="row">
+  <div class="row" id="lists">
 
     <div class="col s6">
-      <h2>Ready to annihilate!</h2>
+      <h3>Ready to annihilate!</h3>
       <ul>
         {{#each burgers}}
           {{#unless devoured}}
@@ -70,7 +78,7 @@
     </div>
 
     <div class="col s6">
-      <h2>Already devoured!</h2>
+      <h3>Already devoured!</h3>
       <ul>
         {{#each burgers}}
           {{#if devoured}}
@@ -82,4 +90,28 @@
 
   </div>
 
+  <div class="row" id="burger_row">
+    <div class="col s3">
+      <img src='assets/img/burger2.png' />
+    </div>
+    <div class="col s3">
+      <img src='assets/img/burger2.png' />
+    </div>
+    <div class="col s3">
+      <img src='assets/img/burger2.png' />
+    </div>
+    <div class="col s3">
+      <img src='assets/img/burger2.png' />
+    </div>
+  </div>
+
 </div>
+
+<footer class="page-footer grey darken-3">
+  <div class="footer-copyright">
+    <div class="container">
+      Made by William Chandler 2017
+      <a class="grey-text text-lighten-4 right" href="https://github.com/wllm-chndlr/burger-annihilator">Github repo</a>
+    </div>
+  </div>
+</footer>
