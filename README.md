@@ -4,9 +4,9 @@
 
 #### This app allows you to devour existing burgers, or add your own. Every burger is stored in a database, whether devoured or not. You can delete burgers, or restore them once devoured.
 
-#### Dig in!
+#### Check it out [here](https://calm-peak-13239.herokuapp.com/), and dig in!
 
-##### Created by William Chandler 2017
-##### with Node.js, Express, MySQL, Handlebars, and a homemade ORM 
+##### Created by William Chandler 2017 with Node.js, Express, MySQL, Handlebars, and a homemade ORM 
+
 
 ![burger](https://clipartion.com/wp-content/uploads/2015/11/burger-and-sandwich-png-images-download-pictures.png)
