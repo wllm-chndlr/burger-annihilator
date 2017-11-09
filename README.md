@@ -9,4 +9,5 @@
 ##### Created by William Chandler 2017 with Node.js, Express, MySQL, Handlebars, and a homemade ORM 
 
 
-![burger](https://clipartion.com/wp-content/uploads/2015/11/burger-and-sandwich-png-images-download-pictures.png)
+<!-- ![burger](https://clipartion.com/wp-content/uploads/2015/11/burger-and-sandwich-png-images-download-pictures.png) -->
+![app screenshot](public/assets/img/ss.png)
