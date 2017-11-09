@@ -3,7 +3,6 @@ html {
 }
 
 body {
-  /* padding: 20px 40px 20px 40px; */
   color: #424242;
   font-family: 'Bangers', cursive;
 }
@@ -46,24 +45,6 @@ img {
 .btn {
   color: #424242;
 }
-
-/* #center {
-  width: 50%;
-}
-
-#left {
-  float: left;
-
-}
-
-#right {
-  float: right;
-
-}
-
-.container {
-  width: 100%;
-} */
 
 .page-footer {
   padding: 0px;

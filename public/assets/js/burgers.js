@@ -1,4 +1,4 @@
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
+// Make sure we wait to attach handlers until the DOM is fully loaded
 $(function() {
   
   $(".create-form").on("submit", function(event) {
@@ -6,9 +6,7 @@ $(function() {
     event.preventDefault();
 
     var newBurger = {
-      // POTENTIAL ISSUE AREA
       burger_name: $("#bu").val().trim(),
-      // devoured: $("[name=devoured]:checked").val().trim()
     };
 
     // Send the POST request
@@ -29,7 +27,6 @@ $(function() {
     var newStatus = $(this).data("newstatus");
 
     var newEatenStatus = {
-      // POTENTIAL ISSUE AREA
       devoured: newStatus
     };
 

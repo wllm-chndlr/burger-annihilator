@@ -1,5 +1,12 @@
 # Burger Annihilator
 
-### Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.
+## Hungry for some burgers? Get ready to do some annihilating!
 
-### The app will display orders in the UI; allow users to "devour" them when ready; and store every burger in a database, whether devoured or not.
+#### This app allows you to devour existing burgers, or add your own. Every burger is stored in a database, whether devoured or not. You can delete burgers, or restore them once devoured.
+
+#### Dig in!
+
+##### Created by William Chandler 2017
+##### with Node.js, Express, MySQL, Handlebars, and a homemade ORM 
+
+![burger](https://clipartion.com/wp-content/uploads/2015/11/burger-and-sandwich-png-images-download-pictures.png)

@@ -5,16 +5,15 @@ var router = express.Router();
 // Import the model (burger.js) to use its database functions
 var burger = require("../models/burger.js");
 
-// Create our routes and set up logic within those routes where required
+// Create routes and set up logic within those routes where required
 
 router.post("/", function(request, response) {
   burger.create([
     "burger_name", "devoured"
   ], [
-    // THIS MIGHT BE POTENTIAL ISSUE SPOT (SECOND BODY REQUEST)
     request.body.burger_name, request.body.devoured
   ], function(result) {
-    // Send back the ID of the new quote
+    // Send back the ID of the new burger
     response.json({ id: result.insertId });
   });
 });
@@ -25,7 +24,6 @@ router.put("/:id", function(request, response) {
   console.log("condition", condition);
 
   burger.update({
-    // ANOTHER POTENTIAL ISSUE AREA
     devoured: request.body.devoured
   }, condition, function(result) {
     if (result.changedRows == 0) {
@@ -50,5 +48,5 @@ router.delete("/:id", function(request, response) {
   });
 });
 
-// Export routes for server.js to use.
+// Export routes for server.js to use
 module.exports = router;

@@ -1,4 +1,4 @@
-// Import the ORM to create functions that will interact with the database.
+// Import the ORM to create functions that will interact with the database
 var orm = require("../config/orm.js");
 
 var burger = {
@@ -9,7 +9,6 @@ var burger = {
     });
   },
   
-  // The variables cols and vals are arrays.
   create: function(columns, values, callback) {
     orm.create("burgers", columns, values, function(result) {
       callback(result);
@@ -29,5 +28,5 @@ var burger = {
   }
 };
 
-// Export the database functions for the controller (burgers_controller.js).
+// Export the database functions for the controller (burgers_controller.js)
 module.exports = burger;

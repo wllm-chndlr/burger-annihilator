@@ -16,29 +16,25 @@ function printQuestionMarks(num) {
 function objToSql(ob) {
   var arr = [];
 
-  // loop through the keys and push the key/value as a string int arr
+  // Loop through the keys and push the key/value as a string int arr
   for (var key in ob) {
     var value = ob[key];
-    // check to skip hidden properties
+    // Check to skip hidden properties
     if (Object.hasOwnProperty.call(ob, key)) {
-      // if string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
+      // If string with spaces, add quotations
       if (typeof value === "string" && value.indexOf(" ") >= 0) {
         value = "'" + value + "'";
       }
-      // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-      // e.g. {sleepy: true} => ["sleepy=true"]
       arr.push(key + "=" + value);
     }
   }
 
-  // translate array of strings to a single comma-separated string
+  // Translate array of strings to a single comma-separated string
   return arr.toString();
 }
 
 var orm = {
   
-  // selectAll()
-
   showAll: function(table, callback) {
     var queryString = "SELECT * FROM " + table + ";";
     
@@ -50,8 +46,6 @@ var orm = {
       callback(result);
     });
   },
-
-  // insertOne()
   
   create: function(table, columns, values, callback) {
     var queryString = "INSERT INTO " + table;
@@ -73,8 +67,6 @@ var orm = {
     });
   },
 
-  // updateOne()
-  
   update: function(table, objColVals, condition, callback) {
     var queryString = "UPDATE " + table;
 
@@ -109,5 +101,5 @@ var orm = {
 
 };
 
-// Export the orm object for the model (burger.js).
+// Export the orm object for the model (burger.js)
 module.exports = orm;
